@@ -1,0 +1,21 @@
+{
+  "name": "hanacaraka",
+  "version": "0.1.0",
+  "description": "Aksara Jawa",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "language",
+    "font",
+    "unicode",
+    "javanese",
+    "aksara"
+  ],
+  "author": "Izzur",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "aksara-unicode": "0.0.7"
+  }
+}
