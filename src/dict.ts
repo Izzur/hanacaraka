@@ -1,5 +1,30 @@
 export default [
   {
+    value: "\uA9A9",
+    name: "JAVANESE LETTER MA",
+    transc: "ma",
+  },
+  {
+    value: "\uA9AA",
+    name: "JAVANESE LETTER YA",
+    transc: "ya",
+  },
+  {
+    value: "\uA9AB",
+    name: "JAVANESE LETTER RA",
+    transc: "ra",
+  },
+  {
+    value: "\uA9AC",
+    name: "JAVANESE LETTER RA AGUNG",
+    transc: "",
+  },
+  {
+    value: "\uA9AD",
+    name: "JAVANESE LETTER LA",
+    transc: "la",
+  },
+  {
     value: "\uA9AE",
     name: "JAVANESE LETTER WA",
     transc: "wa",
