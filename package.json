@@ -2,9 +2,11 @@
   "name": "hanacaraka",
   "version": "0.1.0",
   "description": "Aksara Jawa",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "node test.js"
+    "build": "tsc",
+    "prepare": "npm run build",
+    "test": "node test"
   },
   "keywords": [
     "language",
@@ -14,8 +16,12 @@
     "aksara"
   ],
   "author": "Izzur",
-  "license": "Apache-2.0",
-  "dependencies": {
-    "aksara-unicode": "0.0.7"
-  }
+  "license": "MIT",
+  "repository": "Izzur/hanacaraka",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  },
+  "types": "dist/index.d.ts",
+  "files": ["dist"]
 }
