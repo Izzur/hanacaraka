@@ -1,8 +1,18 @@
-import * as dict from "./dict";
+import dict from "./dict";
 
 export function encode(params: String) {
-  for (const letter in params) {
-    console.log(letter);
-  }
-  return dict;
+  toJavanese();
+  return params;
+}
+
+export function decode(params: String) {
+  const output = params.split("").map(fromJavanese);
+  return output.join("").toUpperCase();
+}
+
+function toJavanese() {}
+
+function fromJavanese(letter) {
+  const index = dict.map((x) => x.value).indexOf(letter);
+  return dict[index].transc;
 }
