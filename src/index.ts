@@ -16,7 +16,7 @@ export function decode(script: string) {
 export function encode(text: string) {
   const syllables = splitSyllable(text);
   const output = syllables.map(toJavanese);
-  return output;
+  return output.join("");
 }
 
 function fromJavanese(letter: string) {
@@ -25,9 +25,12 @@ function fromJavanese(letter: string) {
 }
 
 function toJavanese(letter: string) {
-  return letter;
+  const index = dict.map((x) => x.transc).indexOf(letter);
+  if (index < 0) return "";
+  return dict[index].value;
 }
 
 function splitSyllable(letter: string) {
-  return letter.split("");
+  const regex = /(?<=[aiueo])/;
+  return letter.split(regex);
 }
