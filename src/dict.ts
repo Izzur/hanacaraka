@@ -1,4 +1,5 @@
-export default [
+const signs = [];
+const letters = [
   {
     value: "\uA984",
     name: "JAVANESE LETTER A",
@@ -235,3 +236,20 @@ export default [
     transc: "ha",
   },
 ];
+const vowels = [];
+const consonants = [];
+const punctuation = [];
+const reduplicator = [];
+const digits = [];
+const ellipsis = [];
+
+export {
+  signs,
+  letters,
+  vowels,
+  consonants,
+  punctuation,
+  reduplicator,
+  digits,
+  ellipsis,
+};

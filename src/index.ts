@@ -1,8 +1,8 @@
-import dict from "./dict";
+import { letters } from "./dict";
 
 /**
  * Change javanese script into corresponding latin character
- * @param script
+ * @param script single word in javanese script
  */
 export function decode(script: string) {
   const output = script.split("").map(fromJavanese);
@@ -11,7 +11,7 @@ export function decode(script: string) {
 
 /**
  * Change latin character into corresponding javanese script
- * @param text
+ * @param text single word in latin character
  */
 export function encode(text: string) {
   const syllables = splitSyllable(text);
@@ -19,18 +19,18 @@ export function encode(text: string) {
   return output.join("");
 }
 
-function fromJavanese(letter: string) {
-  const index = dict.map((x) => x.value).indexOf(letter);
-  return dict[index].transc;
+function fromJavanese(syllable: string) {
+  const index = letters.map((x) => x.value).indexOf(syllable);
+  return letters[index].transc;
 }
 
-function toJavanese(letter: string) {
-  const index = dict.map((x) => x.transc).indexOf(letter);
+function toJavanese(syllable: string) {
+  const index = letters.map((x) => x.transc).indexOf(syllable);
   if (index < 0) return "";
-  return dict[index].value;
+  return letters[index].value;
 }
 
-function splitSyllable(letter: string) {
-  const regex = /(?<=[aiueo])/;
-  return letter.split(regex);
+function splitSyllable(word: string) {
+  const regex = /(?<=[bcdfghjklmnpqrstvwxyz][aiueo])/;
+  return word.split(regex);
 }
