@@ -1,4 +1,25 @@
-const signs = [];
+const signs = [
+  {
+    value: "\uA980",
+    name: "JAVANESE SIGN PANYANGGA",
+    transc: "candrabindu",
+  },
+  {
+    value: "\uA981",
+    name: "JAVANESE SIGN CECAK",
+    transc: "anusvara",
+  },
+  {
+    value: "\uA982",
+    name: "JAVANESE SIGN LAYAR",
+    transc: "repha",
+  },
+  {
+    value: "\uA983",
+    name: "JAVANESE SIGN WIGNYAN",
+    transc: "visarga",
+  },
+];
 const letters = [
   {
     value: "\uA984",
@@ -236,7 +257,53 @@ const letters = [
     transc: "ha",
   },
 ];
-const vowels = [];
+const vowels = [
+  {
+    value: "\uA9B4",
+    name: "JAVANESE VOWEL SIGN TARUNG",
+    transc: "aa",
+  },
+  {
+    value: "\uA9B5",
+    name: "JAVANESE VOWEL SIGN TOLONG",
+    transc: "",
+  },
+  {
+    value: "\uA9B6",
+    name: "JAVANESE VOWEL SIGN WULU",
+    transc: "i",
+  },
+  {
+    value: "\uA9B7",
+    name: "JAVANESE VOWEL SIGN WULU MELIK",
+    transc: "ii",
+  },
+  {
+    value: "\uA9B8",
+    name: "JAVANESE VOWEL SIGN SUKU",
+    transc: "u",
+  },
+  {
+    value: "\uA9B9",
+    name: "JAVANESE VOWEL SIGN SUKU MENDUT",
+    transc: "uu",
+  },
+  {
+    value: "\uA9BA",
+    name: "JAVANESE VOWEL SIGN TALING",
+    transc: "e",
+  },
+  {
+    value: "\uA9BB",
+    name: "JAVANESE VOWEL SIGN DIRGA MURE",
+    transc: "ai",
+  },
+  {
+    value: "\uA9BC",
+    name: "JAVANESE VOWEL SIGN PEPET",
+    transc: "ĕ",
+  },
+];
 const consonants = [];
 const punctuation = [];
 const reduplicator = [];
