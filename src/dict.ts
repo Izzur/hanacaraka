@@ -1,4 +1,4 @@
-const signs = [
+const various = [
   {
     value: "\uA980",
     name: "JAVANESE SIGN PANYANGGA",
@@ -304,17 +304,175 @@ const vowels = [
     transc: "ĕ",
   },
 ];
-const consonants = [];
-const punctuation = [];
-const reduplicator = [];
-const digits = [];
-const ellipsis = [];
+const consonants = [
+  {
+    value: "\uA9BD",
+    name: "JAVANESE CONSONANT SIGN KERET",
+    transc: "rĕ",
+  },
+  {
+    value: "\uA9BE",
+    name: "JAVANESE CONSONANT SIGN PENGKAL",
+    transc: "ya",
+  },
+  {
+    value: "\uA9BF",
+    name: "JAVANESE CONSONANT SIGN CAKRA",
+    transc: "ra",
+  },
+];
+const signs = [
+  {
+    value: "\uA9C0",
+    name: "JAVANESE PANGKON",
+    transc: "virama",
+  },
+];
+const punctuation = [
+  {
+    value: "\uA9C1",
+    name: "JAVANESE LEFT RERENGGAN",
+    transc: "",
+  },
+  {
+    value: "\uA9C2",
+    name: "JAVANESE RIGHT RERENGGAN",
+    transc: "",
+  },
+  {
+    value: "\uA9C3",
+    name: "JAVANESE PADA ANDAP",
+    transc: "",
+  },
+  {
+    value: "\uA9C4",
+    name: "JAVANESE PADA MADYA",
+    transc: "",
+  },
+  {
+    value: "\uA9C5",
+    name: "JAVANESE PADA LUHUR",
+    transc: "",
+  },
+  {
+    value: "\uA9C6",
+    name: "JAVANESE PADA WINDU",
+    transc: "",
+  },
+  {
+    value: "\uA9C7",
+    name: "JAVANESE PADA PANGKAT",
+    transc: "",
+  },
+  {
+    value: "\uA9C8",
+    name: "JAVANESE PADA LINGSA",
+    transc: "",
+  },
+  {
+    value: "\uA9C9",
+    name: "JAVANESE PADA LUNGSI",
+    transc: "",
+  },
+  {
+    value: "\uA9CA",
+    name: "JAVANESE PADA ADEG",
+    transc: "",
+  },
+  {
+    value: "\uA9CB",
+    name: "JAVANESE PADA ADEG ADEG",
+    transc: "",
+  },
+  {
+    value: "\uA9CC",
+    name: "JAVANESE PADA PISELEH",
+    transc: "",
+  },
+  {
+    value: "\uA9CD",
+    name: "JAVANESE TURNED PADA PISELEH",
+    transc: "",
+  },
+];
+const reduplicator = [
+  {
+    value: "\uA9CF",
+    name: "JAVANESE PANGRANGKEP",
+    transc: "",
+  },
+];
+const digits = [
+  {
+    value: "\uA9D0",
+    name: "JAVANESE DIGIT ZERO",
+    transc: "0",
+  },
+  {
+    value: "\uA9D1",
+    name: "JAVANESE DIGIT ONE",
+    transc: "1",
+  },
+  {
+    value: "\uA9D2",
+    name: "JAVANESE DIGIT TWO",
+    transc: "2",
+  },
+  {
+    value: "\uA9D3",
+    name: "JAVANESE DIGIT THREE",
+    transc: "3",
+  },
+  {
+    value: "\uA9D4",
+    name: "JAVANESE DIGIT FOUR",
+    transc: "4",
+  },
+  {
+    value: "\uA9D5",
+    name: "JAVANESE DIGIT FIVE",
+    transc: "5",
+  },
+  {
+    value: "\uA9D6",
+    name: "JAVANESE DIGIT SIX",
+    transc: "6",
+  },
+  {
+    value: "\uA9D7",
+    name: "JAVANESE DIGIT SEVEN",
+    transc: "7",
+  },
+  {
+    value: "\uA9D8",
+    name: "JAVANESE DIGIT EIGHT",
+    transc: "8",
+  },
+  {
+    value: "\uA9D9",
+    name: "JAVANESE DIGIT NINE",
+    transc: "9",
+  },
+];
+const ellipsis = [
+  {
+    value: "\uA9DE",
+    name: "JAVANESE PADA TIRTA TUMETES",
+    transc: "",
+  },
+  {
+    value: "\uA9DF",
+    name: "JAVANESE PADA ISEN-ISEN",
+    transc: "",
+  },
+];
 
 export {
-  signs,
+  various,
   letters,
   vowels,
   consonants,
+  signs,
   punctuation,
   reduplicator,
   digits,
