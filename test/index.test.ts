@@ -1,4 +1,13 @@
-import { encode } from "../dist";
+import { encode, decode } from "../src";
 
-const val = encode("foo");
-console.log(val);
+test("Encode latin to hanacaraka", () => {
+  expect(encode("HANACARAKA")).toBe("\uA9B2\uA9A4\uA995\uA9AB\uA98F");
+});
+
+test("Decode hanacaraka to latin", () => {
+  expect(decode("\uA9B2\uA9A4\uA995\uA9AB\uA98F")).toBe("HANACARAKA");
+});
+
+test("Consistent result back and forth", () => {
+  expect("HANACARAKA").toBe(decode(encode("HANACARAKA")));
+});

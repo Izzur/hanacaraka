@@ -1,6 +1,6 @@
 # Hanacaraka
 
-Hanacaraka (&#43442;&#43428;&#43413;&#43435;&#43407;) or Javanese script is writing system of Javanese language.  
+Hanacaraka (&#43442;&#43428;&#43413;&#43435;&#43407;) is Javanese script writing system used in Javanese language.  
 This library help transliterate input string to its Hanacaraka equivalent and vice versa.
 
 ## Usage

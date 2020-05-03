@@ -14,7 +14,7 @@ export function decode(script: string) {
  * @param text single word in latin character
  */
 export function encode(text: string) {
-  const syllables = splitSyllable(text);
+  const syllables = splitSyllable(text.toLowerCase());
   const output = syllables.map(toJavanese);
   return output.join("");
 }
@@ -25,9 +25,11 @@ function fromJavanese(syllable: string) {
 }
 
 function toJavanese(syllable: string) {
+  const combined: string[] = [];
   const index = letters.map((x) => x.transc).indexOf(syllable);
   if (index < 0) return "";
-  return letters[index].value;
+  combined.push(letters[index].value);
+  return combined.join("");
 }
 
 function splitSyllable(word: string) {
