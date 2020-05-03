@@ -10,9 +10,9 @@ This library help transliterate input string to its Hanacaraka equivalent and vi
 ```js
 const hc = require('hanacaraka');
 
-const javenese = hc.encode('carakan'));  // ꦕꦫꦏꦤ꧀
+const javanese = hc.encode('BASAJAWA');  // ꦧꦱꦗꦮ
 
-const latin = hc.decode('ꦕꦫꦏꦤ꧀'); // carakan
+const latin = hc.decode('ꦧꦱꦗꦮ'); // BASAJAWA
 ```
 
 ## References
