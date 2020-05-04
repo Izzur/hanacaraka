@@ -1,4 +1,4 @@
-import { letters } from "./dict";
+import { fromJavanese, toJavanese, splitSyllable } from "./util";
 
 /**
  * Change javanese script into corresponding latin character
@@ -17,22 +17,4 @@ export function encode(text: string) {
   const syllables = splitSyllable(text.toLowerCase());
   const output = syllables.map(toJavanese);
   return output.join("");
-}
-
-function fromJavanese(syllable: string) {
-  const index = letters.map((x) => x.value).indexOf(syllable);
-  return letters[index].transc;
-}
-
-function toJavanese(syllable: string) {
-  const combined: string[] = [];
-  const index = letters.map((x) => x.transc).indexOf(syllable);
-  if (index < 0) return "";
-  combined.push(letters[index].value);
-  return combined.join("");
-}
-
-function splitSyllable(word: string) {
-  const regex = /(?<=[bcdfghjklmnpqrstvwxyz][aiueo])/;
-  return word.split(regex);
 }
