@@ -13,11 +13,20 @@ export function toJavanese(syllable: string) {
   return vowelify(base, vowel[0]);
 }
 
+/**
+ * Split a word into an array of string
+ * @param word single word
+ */
 export function splitSyllable(word: string) {
   const regex = /(?<=[bcdfghjklmnpqrstvwxyz][aiueo])/;
   return word.split(regex);
 }
 
+/**
+ * Turn single syllable into javanese script
+ * @param syllable single syllable
+ * @param vowel single character of vowel
+ */
 export function vowelify(syllable: string, vowel: string) {
   const combined: string[] = [syllable];
   switch (vowel) {
@@ -39,6 +48,11 @@ export function vowelify(syllable: string, vowel: string) {
   return combined.join("");
 }
 
+/**
+ * Find and return symbol from dictionary
+ * @param dictionary category of symbol
+ * @param symbol transcription to find
+ */
 export function getSymbolFrom(dictionary: any[], symbol: string) {
   const index = dictionary.map((x) => x.transc).indexOf(symbol);
   if (index < 0) return "";
