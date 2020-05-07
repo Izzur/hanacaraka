@@ -1,7 +1,7 @@
 {
   "name": "hanacaraka",
   "version": "0.1.1",
-  "description": "Aksara Jawa",
+  "description": "Transliterate latin alphabet to javanese script and vice versa",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
@@ -19,6 +19,7 @@
   "author": "Izzur",
   "license": "MIT",
   "repository": "Izzur/hanacaraka",
+  "homepage": "https://izzur.github.io/hanacaraka/",
   "dependencies": {},
   "devDependencies": {
     "@types/jest": "^25.2.1",
