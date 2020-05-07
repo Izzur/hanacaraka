@@ -1,6 +1,6 @@
 {
   "name": "hanacaraka",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Transliterate latin alphabet to javanese script and vice versa",
   "main": "dist/index.js",
   "scripts": {

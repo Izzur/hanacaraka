@@ -26,3 +26,9 @@ cache:
 
 git:
   depth: 1
+
+scripts:
+  - npm install codecov -g
+  
+after_success:
+  - codecov
