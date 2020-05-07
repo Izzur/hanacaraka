@@ -1,10 +1,18 @@
 import { letters, vowels } from "./dict";
 
+/**
+ * Transliterate single syllable from Javanese script to Latin alphabet
+ * @param syllable
+ */
 export function fromJavanese(syllable: string) {
-  const index = letters.map((x) => x.value).indexOf(syllable);
-  return letters[index].transc;
+  const base = getTranscFrom(letters, syllable);
+  return base;
 }
 
+/**
+ * Transliterate single syllable from Latin alphabet to Javanese script
+ * @param syllable
+ */
 export function toJavanese(syllable: string) {
   const vowelRegex = /[aiueoĕ]/g;
   const vowel = syllable.match(vowelRegex);
@@ -50,11 +58,22 @@ export function vowelify(syllable: string, vowel: string) {
 
 /**
  * Find and return symbol from dictionary
- * @param dictionary category of symbol
- * @param symbol transcription to find
+ * @param dictionary category of dictionary
+ * @param transc corresponding transcription
  */
-export function getSymbolFrom(dictionary: any[], symbol: string) {
-  const index = dictionary.map((x) => x.transc).indexOf(symbol);
+export function getSymbolFrom(dictionary: any[], transc: string) {
+  const index = dictionary.map((x) => x.transc).indexOf(transc);
   if (index < 0) return "";
   return dictionary[index].value;
+}
+
+/**
+ * Find and return transcription from dictionary
+ * @param dictionary category of dictionary
+ * @param symbol corresponding symbol
+ */
+export function getTranscFrom(dictionary: any[], symbol: string) {
+  const index = letters.map((x) => x.value).indexOf(symbol);
+  if (index < 0) return "";
+  return dictionary[index].transc;
 }
