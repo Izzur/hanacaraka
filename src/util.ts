@@ -31,7 +31,7 @@ export function splitSyllable(word: string) {
 }
 
 /**
- * Turn single syllable into javanese script
+ * Add vowel symbol to letter
  * @param syllable single syllable
  * @param vowel single character of vowel
  */
