@@ -40,14 +40,12 @@ export function vowelify(syllable: string, vowel: string) {
   switch (vowel) {
     case "i":
     case "u":
+    case "e":
     case "ĕ":
       combined.push(getSymbolFrom(vowels, vowel));
       break;
-    case "e":
-      combined.unshift(getSymbolFrom(vowels, vowel));
-      break;
     case "o":
-      combined.unshift(getSymbolFrom(vowels, "e"));
+      combined.push(getSymbolFrom(vowels, "e"));
       combined.push(getSymbolFrom(vowels, "aa"));
       break;
     default:
