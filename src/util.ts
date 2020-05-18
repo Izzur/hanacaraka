@@ -1,12 +1,16 @@
-import { letters, vowels } from "./dict";
+import { letters, vowels, digits } from "./dict";
 
 /**
  * Transliterate single syllable from Javanese script to Latin alphabet
  * @param syllable
  */
 export function fromJavanese(syllable: string) {
-  const base = getTranscFrom(letters, syllable);
-  return base;
+  switch (true) {
+    case /\d/.test(syllable):
+      return getTranscFrom(digits, syllable);
+    default:
+      return getTranscFrom(letters, syllable);
+  }
 }
 
 /**
@@ -26,7 +30,7 @@ export function toJavanese(syllable: string) {
  * @param word single word
  */
 export function splitSyllable(word: string) {
-  const regex = /(?<=[bcdfghjklmnpqrstvwxyz][aiueo])/;
+  const regex = /(?<=[bcdfghjklmnpqrstvwxyz][aiueo])|(?<=\d)/;
   return word.split(regex);
 }
 
@@ -71,7 +75,7 @@ export function getSymbolFrom(dictionary: any[], transc: string) {
  * @param symbol corresponding symbol
  */
 export function getTranscFrom(dictionary: any[], symbol: string) {
-  const index = letters.map((x) => x.value).indexOf(symbol);
+  const index = dictionary.map((x) => x.value).indexOf(symbol);
   if (index < 0) return "";
   return dictionary[index].transc;
 }
