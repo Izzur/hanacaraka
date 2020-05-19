@@ -5,12 +5,8 @@ import { letters, vowels, digits } from "./dict";
  * @param syllable
  */
 export function fromJavanese(syllable: string) {
-  switch (true) {
-    case /\d/.test(syllable):
-      return getTranscFrom(digits, syllable);
-    default:
-      return getTranscFrom(letters, syllable);
-  }
+  const base = getTranscFrom(letters, syllable);
+  return base;
 }
 
 /**
@@ -18,6 +14,7 @@ export function fromJavanese(syllable: string) {
  * @param syllable
  */
 export function toJavanese(syllable: string) {
+  if (/\d/.test(syllable)) return getSymbolFrom(digits, syllable);
   const vowelRegex = /[aiueoĕ]/g;
   const vowel = syllable.match(vowelRegex);
   if (!vowel) return "";

@@ -15,7 +15,8 @@
             "preLaunchTask": "tsc: build - tsconfig.json",
             "outFiles": [
                 "${workspaceFolder}/dist/**/*.js"
-            ]
+            ],
+            "runtimeExecutable": "/usr/local/opt/node@12/bin/node"
         }
     ]
 }
