@@ -22,10 +22,10 @@
   "homepage": "https://izzur.github.io/hanacaraka/",
   "dependencies": {},
   "devDependencies": {
-    "@types/jest": "^26.0.3",
-    "jest": "^26.1.0",
-    "ts-jest": "^26.1.1",
-    "typescript": "^3.9.5"
+    "@types/jest": "^26.0.9",
+    "jest": "^26.3.0",
+    "ts-jest": "^26.1.4",
+    "typescript": "^3.9.7"
   },
   "types": "dist/index.d.ts",
   "files": [
